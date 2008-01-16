@@ -2,7 +2,7 @@ package Acme::DateTime::Duration::Numeric;
 
 use strict;
 use 5.8.1;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use overload '""' => \&value, '+0' => \&value, fallback => 1;
 use DateTime;
@@ -26,11 +26,10 @@ sub value { $_[0]->{value} }
 for my $accessor (qw( day hour minute month second week year )) {
     no strict 'refs';
     my $plural = $accessor . "s";
-    *$accessor = sub {
+    *$accessor = *$plural = sub {
         my $self = shift;
         DateTime::Duration->new($plural => $self->{value});
     };
-    *$plural = \&{$accessor};
 }
 
 sub fortnight {

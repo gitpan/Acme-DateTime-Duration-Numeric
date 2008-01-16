@@ -1,4 +1,7 @@
 Revision history for Perl extension Acme::DateTime::Duration::Numeric
 
+0.02  Tue Jan 15 17:15:39 PST 2008
+        - Added DateTime and DateTime::Duration dependencies
+
 0.01  Tue Jan 15 01:36:17 2008
         - original version
