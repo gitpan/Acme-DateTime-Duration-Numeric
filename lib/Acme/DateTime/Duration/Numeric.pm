@@ -2,7 +2,7 @@ package Acme::DateTime::Duration::Numeric;
 
 use strict;
 use 5.8.1;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use overload '""' => \&value, '+0' => \&value, fallback => 1;
 use DateTime;
@@ -64,6 +64,10 @@ __END__
 
 Acme::DateTime::Duration::Numeric - ActiveSupport equivalent to Perl numeric variables
 
+=head1 WARNING
+
+This module is deprecated. Use L<autobox::DateTime::Duration> instead.
+
 =head1 SYNOPSIS
 
   use Acme::DateTime::Duration::Numeric;
@@ -105,6 +109,8 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =head1 SEE ALSO
+
+L<autobox::DateTime::Duration>
 
 L<http://api.rubyonrails.org/classes/ActiveSupport/CoreExtensions/Numeric/Time.html>
 
